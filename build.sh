@@ -40,7 +40,7 @@ print(html)
 PY
       ;;
     cmark)
-      cmark "$md"
+      cmark --unsafe "$md"
       ;;
     plain)
       sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' "$md" |
