@@ -93,7 +93,7 @@ write_page() {
     
     /* Paragraphs */
     p {
-      font-size: 18px;   /* increase this value for bigger normal text */
+      font-size: 22px;   /* increase this value for bigger normal text */
       margin: 1em 0;
     }
 
