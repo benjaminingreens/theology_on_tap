@@ -79,7 +79,7 @@
     if (!body.classList.contains('vcenter')) return;
 
     var isLong = null;      // unknown initially
-    var HYST = 60;          // px buffer to avoid flapping
+    var HYST = 50;          // px buffer to avoid flapping
     var timer = null;
 
     function measure() {
