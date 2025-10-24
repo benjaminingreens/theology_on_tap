@@ -80,7 +80,7 @@ write_page() {
       min-height: 100%; margin: 0; padding: 20px;
       background: #000; color: #fff; font-size: 20px; line-height: 1.7;
     }
-    @media (min-width: 768px) { body { padding: 50px; font-size: 20px; } }
+    @media (min-width: 768px) { body { padding: 50px; font-size: 16px; } }
 
     /* Core content block */
     .content { max-width: 900px; width: 100%; text-align: left; }
