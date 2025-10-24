@@ -91,7 +91,7 @@ Alister McGrath</p>
     if (!body.classList.contains('vcenter')) return;
 
     var isLong = null;      // unknown initially
-    var HYST = 80;          // px buffer to avoid flapping
+    var HYST = 60;          // px buffer to avoid flapping
     var timer = null;
 
     function measure() {
