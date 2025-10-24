@@ -70,34 +70,36 @@ write_page() {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html { height: 100%; box-sizing: border-box; }
+    html { height: 100%; box-sizing: border-box; font-size: 16px; }
     *, *::before, *::after { box-sizing: inherit; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
                    "Segoe UI Symbol", sans-serif;
       display: flex; justify-content: center; align-items: flex-start;
       min-height: 100%; margin: 0; padding: 20px;
-      background: #000; color: #fff; font-size: 20px; line-height: 1.7;
+      background: #000; color: #fff; font-size: 1rem; line-height: 1.7;
     }
-    @media (min-width: 768px) { body { padding: 50px; font-size: 16px; } }
+    @media (min-width: 768px) { body { padding: 50px; font-size: 1.125rem; } }
 
     /* Core content block */
     .content { max-width: 900px; width: 100%; text-align: left; }
 
-    /* Headings */
-    h1 { font-size: 2.0em; margin: 0.2em 0 0.6em; font-weight: 700; }
-    h2 { font-size: 1.5em; margin: 1.4em 0 0.5em; font-weight: 700; color: #fff; }
-    h3 { font-size: 1.25em; margin: 1.2em 0 0.4em; font-weight: 600; }
-    h4, h5, h6 { margin: 1em 0 0.3em; }
-    
-    /* Paragraphs */
+    /* Headings (fixed, not scaled by body size) */
+    h1 { font-size: 2rem; margin: 0.2em 0 0.6em; font-weight: 700; }
+    h2 { font-size: 1.5rem; margin: 1.4em 0 0.5em; font-weight: 700; color: #fff; }
+    h3 { font-size: 1.25rem; margin: 1.2em 0 0.4em; font-weight: 600; }
+    h4, h5, h6 { margin: 1em 0 0.3em; font-size: 1rem; }
+
+    /* Paragraphs — slightly larger normal text */
     p {
-      font-size: 22px;   /* increase this value for bigger normal text */
+      font-size: 1.25rem;  /* ≈20 px */
+      line-height: 1.8;
       margin: 1em 0;
     }
 
-    /* Lists */
+    /* Lists (normal size) */
     ul { list-style: disc; padding-left: 1.5em; }
     ol { list-style: decimal; padding-left: 1.5em; }
     li { margin: 0.4em 0; }
