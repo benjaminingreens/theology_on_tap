@@ -54,7 +54,7 @@ write_page() {
   out="$2"
 
   # --- detect optional layout hint(s) in first 20 lines ---
-  # Syntax (any order, space-separated):
+  # Syntax (space-separated, any order):
   #   <!-- layout: left|center|justify [center-vert] -->
   LAYOUT_LINE="$(
     head -n 20 "$md" | tr -d '\r' \
@@ -93,9 +93,12 @@ write_page() {
       min-height: 100%; margin: 0; padding: 20px;
       background: #000; color: #fff; font-size: 1rem; line-height: 1.7;
     }
-    /* Vertically centered pages toggle this class */
+
+    /* Vertically center only when page is short; revert for long pages */
     body.vcenter { align-items: center; }
-    body.vcenter .content { margin: 4vh 0; }
+    body.vcenter:not(.long) .content { margin: 4vh 0; }
+    body.vcenter.long { align-items: flex-start; }
+    body.vcenter.long .content { margin: 0; }
 
     @media (min-width: 768px) { body { padding: 50px; font-size: 1.125rem; } }
 
@@ -111,7 +114,7 @@ write_page() {
     /* Paragraphs — slightly larger normal text (~20px) */
     p { font-size: 1.25rem; line-height: 1.8; margin: 1em 0; }
 
-    /* Lists (keep base size; change if you want them larger) */
+    /* Lists (base size; change if you want them larger) */
     ul { list-style: disc; padding-left: 1.5em; }
     ol { list-style: decimal; padding-left: 1.5em; }
     li { margin: 0.4em 0; }
@@ -137,14 +140,33 @@ write_page() {
     .content.left    { text-align: left; }
     .content.center  { text-align: center; }
     .content.justify { text-align: justify; text-justify: inter-word; }
-    .content.center-vert { align-self: center; } /* legacy/no-op if using body.vcenter */
   </style>
 </head>
 <body class="${BODY_CLASS}">
   <div class="content ${PAGE_CLASS}">
 ${CONTENT_HTML}
   </div>
+
+  <!-- Analytics (optional) -->
   <script data-goatcounter="https://benjaminingreens.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <!-- Conditionally disable vertical centering for long pages -->
+  <script>
+  (function () {
+    function adjust() {
+      var body = document.body;
+      if (!body.classList.contains('vcenter')) return;
+      var content = document.querySelector('.content');
+      if (!content) return;
+      var cs = getComputedStyle(body);
+      var pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+      var tooLong = content.scrollHeight > (window.innerHeight - pad);
+      body.classList.toggle('long', tooLong);
+    }
+    window.addEventListener('load', adjust, { once: true });
+    window.addEventListener('resize', adjust);
+  })();
+  </script>
 </body>
 </html>
 HTML
