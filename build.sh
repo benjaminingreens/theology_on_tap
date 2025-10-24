@@ -105,7 +105,7 @@ write_page() {
     li { margin: 0.4em 0; }
 
     /* Links */
-    a { color: #fff; text-decoration: underline; font-size: 1em; }
+    a { color: #fff; text-decoration: underline; font-size: 1.5em; }
     a:hover { text-decoration: none; }
 
     /* Code */
