@@ -15,31 +15,31 @@
       min-height: 100%; margin: 0; padding: 20px;
       background: #000; color: #fff; font-size: 1rem; line-height: 1.7;
     }
+    /* Vertically centered pages toggle this class */
+    body.vcenter { align-items: center; }
+    body.vcenter .content { margin: 4vh 0; }
+
     @media (min-width: 768px) { body { padding: 50px; font-size: 1.125rem; } }
 
     /* Core content block */
     .content { max-width: 900px; width: 100%; text-align: left; }
 
-    /* Headings (fixed, not scaled by body size) */
-    h1 { font-size: 2rem; margin: 0.2em 0 0.6em; font-weight: 700; }
+    /* Headings (fixed sizes using rem) */
+    h1 { font-size: 2rem;  margin: 0.2em 0 0.6em; font-weight: 700; }
     h2 { font-size: 1.5rem; margin: 1.4em 0 0.5em; font-weight: 700; color: #fff; }
     h3 { font-size: 1.25rem; margin: 1.2em 0 0.4em; font-weight: 600; }
     h4, h5, h6 { margin: 1em 0 0.3em; font-size: 1rem; }
 
-    /* Paragraphs — slightly larger normal text */
-    p {
-      font-size: 1.25rem;  /* ≈20 px */
-      line-height: 1.8;
-      margin: 1em 0;
-    }
+    /* Paragraphs — slightly larger normal text (~20px) */
+    p { font-size: 1.25rem; line-height: 1.8; margin: 1em 0; }
 
-    /* Lists (normal size) */
+    /* Lists (keep base size; change if you want them larger) */
     ul { list-style: disc; padding-left: 1.5em; }
     ol { list-style: decimal; padding-left: 1.5em; }
     li { margin: 0.4em 0; }
 
-    /* Links */
-    a { color: #fff; text-decoration: underline; font-size: 1.5em; }
+    /* Links (inherit size) */
+    a { color: #fff; text-decoration: underline; }
     a:hover { text-decoration: none; }
 
     /* Code */
@@ -55,14 +55,14 @@
     .center { text-align: center; }
     img { max-width: 100%; height: auto; display: block; margin: 1em auto; }
 
-    /* Layout variants */
+    /* Layout variants (text alignment) */
     .content.left    { text-align: left; }
     .content.center  { text-align: center; }
     .content.justify { text-align: justify; text-justify: inter-word; }
-    .content.center-vert { align-self: center; }
+    .content.center-vert { align-self: center; } /* legacy/no-op if using body.vcenter */
   </style>
 </head>
-<body>
+<body class="">
   <div class="content center">
 <!-- layout: center -->
 <h1>Slides</h1>

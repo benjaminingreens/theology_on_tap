@@ -1,7 +1,5 @@
 <!-- layout: left -->
 
-# Talk
-
 # What is Theology?
 
 ---
