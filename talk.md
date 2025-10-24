@@ -1,6 +1,10 @@
 <!-- layout: left -->
 
+# Talk
+
 # What is Theology?
+
+---
 
 *Please note that this was written to be spoken with a slideshow, not read as plain text. It is not yet fully adapted for article format - though I hope to adapt it soon.*
 

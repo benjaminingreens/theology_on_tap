@@ -1,6 +1,8 @@
 <!-- layout: center -->
 # Slides
 
+---
+
 <div class="center">
   <img src="slide1.JPG" alt="Slide 1">
   <img src="slide2.JPG" alt="Slide 2">

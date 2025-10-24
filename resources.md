@@ -1,4 +1,7 @@
+<!-- layout: center -->
 # Resources
+
+---
 
 ## Recommended Reading
 
@@ -7,6 +10,8 @@
 *Simply Christian* - N.T. Wright
 
 *Theology: The Basics* - Alister McGrath
+
+---
 
 ## Online Resources
 
