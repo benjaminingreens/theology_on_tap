@@ -1,5 +1,7 @@
 <!-- layout: left -->
 
+*Please note that this was written to be spoken, not read. It is not yet fully adapted as an article - though I hope to adapt it soon.*
+
 # What is Theology?
 
 ## 1. Introduction
