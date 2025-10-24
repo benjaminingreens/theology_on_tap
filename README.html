@@ -1,59 +1,3 @@
-#!/bin/sh
-set -eu
-
-# Usage:
-#   ./build.sh               # build all *.md in current dir
-#   ./build.sh file1.md ...  # build only specific files
-
-# --- choose a renderer once ---
-RENDER=""
-if command -v lowdown >/dev/null 2>&1; then
-  RENDER="lowdown"
-elif python3 - <<'PY' >/dev/null 2>&1
-import importlib.util, sys
-sys.exit(0 if importlib.util.find_spec("markdown") else 1)
-PY
-then
-  RENDER="py"
-elif command -v cmark >/dev/null 2>&1; then
-  RENDER="cmark"
-else
-  RENDER="plain"
-fi
-
-render_md() {
-  md="$1"
-  case "$RENDER" in
-    lowdown)
-      lowdown -s -Thtml "$md"
-      ;;
-    py)
-      python3 - "$md" <<'PY'
-import sys, markdown
-p = sys.argv[1]
-text = open(p, 'r', encoding='utf-8').read()
-html = markdown.markdown(
-    text,
-    extensions=["extra","sane_lists","attr_list"]
-)
-print(html)
-PY
-      ;;
-    cmark)
-      cmark "$md"
-      ;;
-    plain)
-      sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' "$md" |
-      sed '1s/^/<pre>/' -e '$s/$/<\/pre>/'
-      ;;
-  esac
-}
-
-write_page() {
-  md="$1"
-  out="$2"
-  CONTENT_HTML="$(render_md "$md")"
-  cat > "$out" <<'HTML'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,39 +42,8 @@ write_page() {
 </head>
 <body>
   <div class="content">
-HTML
-  printf '%s\n' "$CONTENT_HTML" >> "$out"
-  cat >> "$out" <<'HTML'
+<h1>theology_on_tap</h1>
   </div>
   <script data-goatcounter="https://benjaminingreens.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
-HTML
-  echo "Wrote $out"
-}
-
-build_one() {
-  md="$1"
-  case "$md" in
-    *.md) ;;
-    *) echo "Skip (not .md): $md" >&2; return ;;
-  esac
-  base=$(basename "$md" .md)
-  out="${base}.html"
-  write_page "$md" "$out"
-}
-
-if [ "$#" -gt 0 ]; then
-  for md in "$@"; do
-    build_one "$md"
-  done
-else
-  set -- ./*.md
-  if [ ! -e "$1" ] || [ "$1" = "./*.md" ]; then
-    echo "No .md files found."
-  else
-    for md in "$@"; do
-      build_one "${md#./}"
-    done
-  fi
-fi
