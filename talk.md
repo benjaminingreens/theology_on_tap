@@ -1,10 +1,8 @@
 <!-- layout: left -->
 
-WHAT IS THEOLOGY?
-=================
+# WHAT IS THEOLOGY?
 
-1. INTRODUCTION
----------------
+## 1. INTRODUCTION
 
 Good evening everyone. Well done for making it to Friday - and an even bigger well done for coming out on a Friday night. It's good to see everyone and to be here with you for the first session of Theology on Tap. 
 
@@ -16,11 +14,9 @@ So today we're going to be kicking off Theology on Tap by thinking about the que
 
 So before we get stuck in, I want to start with a small thought experiment if that's okay.
 
-2. THEOLOGY AS WHY
-------------------
+## 2. THEOLOGY AS WHY
 
-2.1. THOUGHT EXPERIMENT
------------------------
+### 2.1. THOUGHT EXPERIMENT
 
 First, I want you to imagine yourself sitting on a park bench on a nice summer's day. Maybe you're reading a book or you're on your phone - or maybe you're just admiring the scenery. On the bench directly opposite to you are two individuals. On the left side of the bench is a man wearing a 3-piece suit, accompanied by his briefcase. On the right side of the bench is a young boy, slightly slouched, and listening to some music.
 
@@ -32,8 +28,7 @@ So - I'd like a quick show of hands. Please raise your hand if you would find th
 
 Well - I want to spend one or two minutes thinking about this, because I think it helps us to understand something fundamental about theology, and we will see why in a little bit.
 
-2.2. HOW VS WHY
----------------
+### 2.2. HOW VS WHY
 
 So - we want to know the answer to the question, 'What happened?'. Let's take our two answers and examine them. We have the answer of the man in the three-piece suit, and we have the answer of the young boy. What are their differences?
 
@@ -49,8 +44,7 @@ Lastly, because 'why answers' tend to focus on people and their decisions, they 
 
 All-in-all, when we need to make sense of an event or a series of events, these are the two types of answers on offer. We have 'how answers', and 'why answers'. Neither is 'the correct one', so to speak, but they are doing quite different things. A 'how answer' focuses on describing the mechanism of an event; on explaining *how* it happened. A 'why answer', however, focuses on the often personal story behind it which tells us *why* it happened - regardless of how it happened. This, I think, is why we preferred the boy's answer: he gave us a personal and story-driven answer which got to the heart of *why* the ball did what it did.
 
-2.3. STUDY OF THE GUY
----------------------
+### 2.3. STUDY OF THE GUY
 
 So, what does all of this have to do with theology? Well, I'd like to offer you one last illustration to bring us right into the depths of theology and what it's all about. Are you guys with me so far? Great.
 
@@ -100,11 +94,9 @@ If you have questions about the origins of everything - study the guy and his st
 
 Of course, the guy is God, and his story is the story of the Bible - the biblical story. So what I'd like us to do - if it's alright - is some theology. I want to look at the guy and his story. You guys with me?
 
-3. THE BIBLICAL STORY
----------------------
+## 3. THE BIBLICAL STORY
 
-3.1. THE EXODUS TEMPLATE
-------------------------
+### 3.1. THE EXODUS TEMPLATE
 
 So - Theology; God and His story; the story of the Bible. How do we begin to engage with it? Well, in order to understand what is in our Bibles, I want to dive into what many theologians consider to be a backbone of the biblical narrative: The Exodus Story.
 
@@ -122,8 +114,7 @@ Interestingly, these five steps make up a story template which seems to be used 
 
 So what I want to do, if it's alright, is follow the three stories and track this Exodus structure through each of them. Hopefully, at the end, we'll have a good idea of what God's story is about. Does that sound good to you guys?
 
-3.2. THE CREATION STORY
------------------------
+### 3.2. THE CREATION STORY
 
 So - let's get stuck in. The first story which uses this template - and this might surprise you - is the story of creation in Genesis 1-2. Let's have a look at it.
 
@@ -147,8 +138,7 @@ CONT. However, something unexpected happens to disrupt this good world. The huma
 
 So what does this mean for our creation story? Well, tragically, it reverts back to the first step where creation is enslaved to the void; to death. And what's really interesting is that instead of just telling us this, Genesis shows us: In God's act of judgement, the waters which He had separated to free the world return to cover it in the story of Noah's flood. It is an act of un-creation; a return to slavery where death and the void now has a claim on everything.
 
-3.3. THE EXODUS STORY
----------------------
+### 3.3. THE EXODUS STORY
 
 So, that's the first story in the bible which uses the Exodus template - and it just so happens to be the opening and foundational narrative.
 
@@ -168,8 +158,7 @@ LAND. He leads them into this good land.
 
 Sadly, once again, the story does not end well. Israel follows other gods, and they are a poor example. So, they are banished - exiled - from their land, and they are subjugated like slaves in the hands of the Babylonians. The great Exodus story itself, like the creation story, tragically reverts to its starting point. The world is still enslaved to death and the void.
 
-3.4. THE JESUS STORY
---------------------
+### 3.4. THE JESUS STORY
 
 So this story of the Exodus - the second story in the Bible which 'uses' the Exodus template - shows us the attempt to free the world from the slavery it was in. Shall we say that God failed? Well, the prophets still had hope. Isaiah wrote to the exiles in Babylon and said:
 
@@ -195,8 +184,7 @@ LAND. ...and eagerly await the promised land.
 
 And with that final story - the story of Jesus - the Bible's story reaches a climax. We have a grand narrative of a good world intended to be jointly run by God and humans. It goes tragically wrong, and the world is enslaved to death - until Jesus frees it, promising to lead his people to new land; a new Eden where the original plan can flourish.
 
-4. THEOLOGY IS...
------------------
+## 4. THEOLOGY IS...
 
 So as we come in to land, I want to summarise what we've thought about so far when it comes to the question 'What is Theology?'. I want to touch on three things: two that we have already looked at, and one final thing.
 
