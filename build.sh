@@ -53,13 +53,12 @@ write_page() {
   md="$1"
   out="$2"
 
-  # detect optional layout hint
-  PAGE_CLASS="$(sed -n '1,20p' "$md" \
-    | tr -d '\r' \
-    | awk 'tolower($0) ~ /<!--[[:space:]]*layout:[[:space:]]*(left|center|justify|center-vert)[[:space:]]*-->/ {
-             match(tolower($0), /layout:[[:space:]]*(left|center|justify|center-vert)/, m);
-             print m[1]; exit
-           }')"
+  # --- detect optional layout hint in first 20 lines ---
+  PAGE_CLASS="$(
+    head -n 20 "$md" | tr -d '\r' \
+    | grep -i -m1 -E '<!--[[:space:]]*layout:[[:space:]]*(left|center|justify|center-vert)[[:space:]]*-->' \
+    | sed -E 's/.*layout:[[:space:]]*([a-z-]+).*/\1/i'
+  )"
   [ -n "${PAGE_CLASS:-}" ] || PAGE_CLASS="left"
 
   CONTENT_HTML="$(render_md "$md")"
