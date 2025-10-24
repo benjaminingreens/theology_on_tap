@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html { height: 100%; box-sizing: border-box; font-size: 16px; }
+    html { height: 100%; box-sizing: border-box; font-size: 16px; scrollbar-gutter: stable both-edges; }
     *, *::before, *::after { box-sizing: inherit; }
 
     body {
@@ -84,21 +84,44 @@ Alister McGrath</p>
   <!-- Analytics (optional) -->
   <script data-goatcounter="https://benjaminingreens.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-  <!-- Conditionally disable vertical centering for long pages -->
+  <!-- Conditionally disable vertical centering for long pages; debounce + hysteresis to avoid flicker -->
   <script>
   (function () {
-    function adjust() {
-      var body = document.body;
-      if (!body.classList.contains('vcenter')) return;
+    var body = document.body;
+    if (!body.classList.contains('vcenter')) return;
+
+    var isLong = null;      // unknown initially
+    var HYST = 80;          // px buffer to avoid flapping
+    var timer = null;
+
+    function measure() {
       var content = document.querySelector('.content');
       if (!content) return;
+
       var cs = getComputedStyle(body);
       var pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
-      var tooLong = content.scrollHeight > (window.innerHeight - pad);
-      body.classList.toggle('long', tooLong);
+      var avail = window.innerHeight - pad;
+      var h = content.scrollHeight;
+
+      if (isLong === null) {
+        isLong = h > avail;
+      } else if (isLong) {
+        if (h < (avail - HYST)) isLong = false;
+      } else {
+        if (h > (avail + HYST)) isLong = true;
+      }
+
+      body.classList.toggle('long', !!isLong);
     }
-    window.addEventListener('load', adjust, { once: true });
-    window.addEventListener('resize', adjust);
+
+    function debouncedMeasure() {
+      clearTimeout(timer);
+      timer = setTimeout(measure, 200);
+    }
+
+    window.addEventListener('load', measure, { once: true });
+    window.addEventListener('orientationchange', debouncedMeasure);
+    window.addEventListener('resize', debouncedMeasure);
   })();
   </script>
 </body>
