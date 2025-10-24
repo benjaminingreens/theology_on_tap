@@ -14,6 +14,8 @@ So today we're going to be kicking off Theology on Tap by thinking about the que
 
 So before we get stuck in, I want to start with a small thought experiment if that's okay.
 
+---
+
 ## 2. Theology as 'Why'
 
 ### 2.1. Thought Experiment
@@ -27,6 +29,8 @@ The suited man is first to speak, and offers you this explanation: 'Well, there 
 So - I'd like a quick show of hands. Please raise your hand if you would find the answer of the man in the suit more helpful. ... Now please raise your hand if you would find the answer of the boy more helpful. ... Okay - interesting. So I think many of us would agree that the boy's answer hits home for us a bit more. It's more of a satisfactory answer, right? But the question is... why? Why do we prefer that answer to the question of what happened? 
 
 Well - I want to spend one or two minutes thinking about this, because I think it helps us to understand something fundamental about theology, and we will see why in a little bit.
+
+---
 
 ### 2.2. 'How' vs 'Why'
 
@@ -43,6 +47,8 @@ So - because 'how answers' focus on the parts of the process which make up the e
 Lastly, because 'why answers' tend to focus on people and their decisions, they often look like stories. 'How answers', however, are mostly descriptive of the objects and forces at play.
 
 All-in-all, when we need to make sense of an event or a series of events, these are the two types of answers on offer. We have 'how answers', and 'why answers'. Neither is 'the correct one', so to speak, but they are doing quite different things. A 'how answer' focuses on describing the mechanism of an event; on explaining *how* it happened. A 'why answer', however, focuses on the often personal story behind it which tells us *why* it happened - regardless of how it happened. This, I think, is why we preferred the boy's answer: he gave us a personal and story-driven answer which got to the heart of *why* the ball did what it did.
+
+---
 
 ### 2.3. The Guy and His Story
 
@@ -94,6 +100,8 @@ If you have questions about the origins of everything - study the guy and his st
 
 Of course, the guy is God, and his story is the story of the Bible - the biblical story. So what I'd like us to do - if it's alright - is some theology. I want to look at the guy and his story. You guys with me?
 
+---
+
 ## 3. The Biblical Story
 
 ### 3.1. The Exodus Template
@@ -113,6 +121,8 @@ Now I realise I have skimmed over the story there - but we'll come back to it in
 Interestingly, these five steps make up a story template which seems to be used all over the Bible. In particular - there are three major biblical stories which use this template. Each of them are central to the biblical story, and this Exodus structure runs like a series of threads through each of them in a way that really helps us grasp the whole biblical narrative.
 
 So what I want to do, if it's alright, is follow the three stories and track this Exodus structure through each of them. Hopefully, at the end, we'll have a good idea of what God's story is about. Does that sound good to you guys?
+
+---
 
 ### 3.2. The Creation Story
 
@@ -138,6 +148,8 @@ CONT. However, something unexpected happens to disrupt this good world. The huma
 
 So what does this mean for our creation story? Well, tragically, it reverts back to the first step where creation is enslaved to the void; to death. And what's really interesting is that instead of just telling us this, Genesis shows us: In God's act of judgement, the waters which He had separated to free the world return to cover it in the story of Noah's flood. It is an act of un-creation; a return to slavery where death and the void now has a claim on everything.
 
+---
+
 ### 3.3. The Exodus Story
 
 So, that's the first story in the bible which uses the Exodus template - and it just so happens to be the opening and foundational narrative.
@@ -157,6 +169,8 @@ WILDERNESS. After 40 years of wandering and wrestling with God,
 LAND. He leads them into this good land.
 
 Sadly, once again, the story does not end well. Israel follows other gods, and they are a poor example. So, they are banished - exiled - from their land, and they are subjugated like slaves in the hands of the Babylonians. The great Exodus story itself, like the creation story, tragically reverts to its starting point. The world is still enslaved to death and the void.
+
+---
 
 ### 3.4. The Jesus Story
 
@@ -183,6 +197,8 @@ WILDERNESS. So Jesus' followers - the Church - begin their journey. Like Israel 
 LAND. ...and eagerly await the promised land.
 
 And with that final story - the story of Jesus - the Bible's story reaches a climax. We have a grand narrative of a good world intended to be jointly run by God and humans. It goes tragically wrong, and the world is enslaved to death - until Jesus frees it, promising to lead his people to new land; a new Eden where the original plan can flourish.
+
+---
 
 ## 4. Theology is...
 
