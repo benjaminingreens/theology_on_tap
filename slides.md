@@ -1,4 +1,4 @@
-<!-- layout: center -->
+<!-- layout: center center-vert-->
 # Slides
 
 ---
