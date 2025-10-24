@@ -5,11 +5,14 @@
 
 ## Recommended Reading
 
-*The Drama of Scripture* - Michael Goheen
+*The Drama of Scripture*
+Michael Goheen
 
-*Simply Christian* - N.T. Wright
+*Simply Christian*
+N.T. Wright
 
-*Theology: The Basics* - Alister McGrath
+*Theology: The Basics*
+Alister McGrath
 
 ---
 
