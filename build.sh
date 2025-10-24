@@ -48,12 +48,12 @@ cat > "$OUT" <<HTML
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
                    "Segoe UI Symbol", sans-serif;
-      display: flex; justify-content: center; align-items: center;
+      display: flex; justify-content: center; align-items: flex-start;
       min-height: 100%; margin: 0; padding: 20px;
       background: #000; color: #fff; font-size: 17px; line-height: 1.7;
     }
     @media (min-width: 768px) { body { padding: 50px; font-size: 20px; } }
-    .content { max-width: 900px; width: 100%; text-align: left; }
+    .content { max-width: 900px; width: 100%; text-align: center; }
 
     /* Headings: normal colors/weights, sensible sizes */
     h1 { font-size: 2.0em; margin: 0.2em 0 0.6em; font-weight: 700; }
