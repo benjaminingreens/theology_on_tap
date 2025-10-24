@@ -1,4 +1,4 @@
-<!-- layout: center -->
+<!-- layout: center center-vert-->
 ***Theology on Tap: Session 1***
 
 # What is Theology?
