@@ -52,8 +52,19 @@ PY
 write_page() {
   md="$1"
   out="$2"
+
+  # detect optional layout hint
+  PAGE_CLASS="$(sed -n '1,20p' "$md" \
+    | tr -d '\r' \
+    | awk 'tolower($0) ~ /<!--[[:space:]]*layout:[[:space:]]*(left|center|justify|center-vert)[[:space:]]*-->/ {
+             match(tolower($0), /layout:[[:space:]]*(left|center|justify|center-vert)/, m);
+             print m[1]; exit
+           }')"
+  [ -n "${PAGE_CLASS:-}" ] || PAGE_CLASS="left"
+
   CONTENT_HTML="$(render_md "$md")"
-  cat > "$out" <<'HTML'
+
+  cat > "$out" <<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,41 +82,54 @@ write_page() {
       background: #000; color: #fff; font-size: 17px; line-height: 1.7;
     }
     @media (min-width: 768px) { body { padding: 50px; font-size: 20px; } }
+
+    /* Core content block */
     .content { max-width: 900px; width: 100%; text-align: left; }
 
+    /* Headings */
     h1 { font-size: 2.0em; margin: 0.2em 0 0.6em; font-weight: 700; }
     h2 { font-size: 1.5em; margin: 1.4em 0 0.5em; font-weight: 700; color: #fff; }
     h3 { font-size: 1.25em; margin: 1.2em 0 0.4em; font-weight: 600; }
     h4, h5, h6 { margin: 1em 0 0.3em; }
 
+    /* Lists */
     ul { list-style: disc; padding-left: 1.5em; }
     ol { list-style: decimal; padding-left: 1.5em; }
     li { margin: 0.4em 0; }
 
+    /* Links */
     a { color: #fff; text-decoration: underline; }
     a:hover { text-decoration: none; }
 
+    /* Code */
     code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
     pre { overflow: auto; padding: 0.8em; background: #0f0f0f; border-radius: 6px; }
 
+    /* Blockquotes, hr */
     blockquote { margin: 1em 0; padding-left: 1em; border-left: 4px solid #333; color: #ddd; }
     hr { border: 0; border-top: 1px solid #222; margin: 2em 0; }
 
+    /* Helpers */
     .date { color: #aaa; margin: 0 0 2em 0; }
     .center { text-align: center; }
     img { max-width: 100%; height: auto; display: block; margin: 1em auto; }
+
+    /* Layout variants */
+    .content.left    { text-align: left; }
+    .content.center  { text-align: center; }
+    .content.justify { text-align: justify; text-justify: inter-word; }
+    .content.center-vert { align-self: center; }
   </style>
 </head>
 <body>
-  <div class="content">
-HTML
-  printf '%s\n' "$CONTENT_HTML" >> "$out"
-  cat >> "$out" <<'HTML'
+  <div class="content ${PAGE_CLASS}">
+${CONTENT_HTML}
   </div>
   <script data-goatcounter="https://benjaminingreens.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 HTML
+
   echo "Wrote $out"
 }
 

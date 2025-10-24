@@ -1,3 +1,4 @@
+<!-- layout: center -->
 # Slides
 
 <div class="center">
