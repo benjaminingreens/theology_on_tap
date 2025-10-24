@@ -8,3 +8,5 @@
 [Talk](talk.html)
 
 [Slides](slides.html)
+
+[Resources](resources.html)
