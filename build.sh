@@ -48,7 +48,7 @@ cat > "$OUT" <<HTML
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
                    "Segoe UI Symbol", sans-serif;
-      display: flex; justify-content: center; align-items: flex-start;
+      display: flex; justify-content: center; align-items: center;
       min-height: 100%; margin: 0; padding: 20px;
       background: #000; color: #fff; font-size: 17px; line-height: 1.7;
     }
